@@ -3,6 +3,6 @@
 Neste repositório são encontrados os templates em LaTeX dos trabalhos acadêmicos de conclusão de curso para os cursos de:
  
  - Graduação em Tecnologia em Sistemas para Internet;
- - Pós-Graduação Lato Sensu em Desenvolvimento de Aplicações para Dispositivos Móveis
+ - Pós-Graduação Lato Sensu em Desenvolvimento de Aplicações para Dispositivos Móveis.
 
-Este respositório é mantido pelo Prof. Dr. David Buzatto.
+Este respositório é mantido pelo Prof. Dr. David Buzatto (davidbuzatto[at]ifsp.edu.br).
