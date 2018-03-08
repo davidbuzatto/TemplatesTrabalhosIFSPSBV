@@ -1,0 +1,120 @@
+\chapter{Revisão da Literatura}
+\label{cap:02}
+
+Texto da revisão da literatura, dividido em seções e subseções.
+
+
+Este é um exemplo de como usar figuras. Referência cruzada: Figura~\ref{fig:exemplo}
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Exemplo de figura}
+	%scale redimensiona a figura.
+	%1 = 100% do tamanho original
+	%0.20 = 20% do tamanho original
+	\includegraphics[scale=0.20]{imagens/exemplo}
+	\\\textbf{Fonte:} Elaborada pelo autor
+	\label{fig:exemplo}
+\end{figure}
+\FloatBarrier
+
+
+Este é um exemplo de como usar tabelas. Referência cruzada: Tabela~\ref{tab:exemplo}
+
+\FloatBarrier
+\begin{table}[!htbp]
+\centering
+\caption{Exemplo de tabela de 2 colunas}
+	\begin{tabular}{ c | c }
+		\hline
+		\textbf{Coluna 1} & \textbf{Coluna 2} \\ \hline
+		Dado 1a           & Dado 1b           \\ \hline
+		Dado 2a           & Dado 2b           \\ \hline
+		Dado 3a           & Dado 3b           \\ \hline
+		Dado 4a           & Dado 4b           \\ \hline
+	\end{tabular}
+	\\ \vspace{0.2cm}
+	\textbf{Fonte:} Elaborada pelo autor
+	\label{tab:exemplo}
+\end{table}
+\FloatBarrier
+
+
+Este é um exemplo de como usar equações. Referência cruzada: Equação~\ref{eq:exemplo}
+
+\begin{equation}
+\sum_{i=1}^{n} = \frac{n(n+1)}{2}
+\label{eq:exemplo}
+\end{equation}
+
+
+Exemplo de inserção de lista de código fonte (não use acentos no código!):
+
+\lstinputlisting[language=Java]{fontes/Grafo.java} 
+
+
+
+Este é um exemplo de como inserir texto sem formatação (ambiente verbatim):
+
+\begin{verbatim}
+	Texto sem formatação, como espaçamento igual.
+\end{verbatim}
+
+
+Exemplo de lista de itens:
+
+\begin{itemize}
+	\item \textbf{Item 1:} texto...;
+	\item \textbf{Item 2:} texto...;
+	\item \textbf{Item 3:} texto...;
+	\item \textbf{Item n:} texto...;
+\end{itemize}
+
+
+Exemplo de lista numerada:
+
+\begin{enumerate}
+	\item \textbf{Item:} texto...;
+	\item \textbf{Item:} texto...;
+	\item \textbf{Item:} texto...;
+	\item \textbf{Item:} texto...;
+\end{enumerate}
+
+
+Exemplos de comandos para texto e referências:
+
+\begin{itemize}
+	\item Negrito (comando \verb|\textbf|): \textbf{texto em negrito};
+	\item Itálico (comando \verb|\textit|): \textit{texto em itálico};
+	\item Sublinhado (comando \verb|\underline|): \underline{texto sublinhado};
+	\item Negrito e itálico (usar comandos juntos): \textbf{\textit{texto em negrito e itálico}};
+	\item Ambiente matemático inline (comando \verb|$ expressão $|): $s = x^2-2x +1$;
+	\item Referência normal (comando \verb|\cite|):
+	\begin{itemize}
+		\item \cite{Agaisse1995};
+		\item \cite{Abedi2014};
+		\item \cite{AgapitoTenfen2014};
+	\end{itemize}
+	\item Referência nome e ano (comando \verb|\citeauthorandyear|):
+	\begin{itemize}
+		\item \citeauthorandyear{Agaisse1995};
+		\item \citeauthorandyear{Abedi2014};
+		\item \citeauthorandyear{AgapitoTenfen2014};
+	\end{itemize}
+\end{itemize}
+
+
+Exemplo 1 de referência direta:
+
+\begin{citacao}
+	Os 20 aminoácidos usualmente encontrados como resíduos em proteínas contém um grupo $\alpha$-carboxil, um grupo $\alpha$-amino e um grupo R distinto substituído no átomo de carbono $\alpha$. O átomo de carbono $\alpha$ de todos os aminoácidos, com exceção da glicina, é assimétrico e, portanto, os aminoácidos podem existir em pelo menos duas formas estereoisoméricas. Somente os estereoisômeros L, com uma configuração relacionada à configuração absoluta da molécula de referência L-gliceraldeído, são encontrados em proteínas \cite[p. 81]{Nelson2014}
+\end{citacao}
+
+Exemplo 2 de referência direta:
+
+\begin{citacao}
+	\textit{These various insecticidal proteins are synthesized during the stationary phase and accumulate in the mother cell as a crystal inclusion which can account for up to 25\% of the dry weight of the sporulated cells. The amount of crystal protein produced by a B. thuringiensis culture in laboratory conditions (about 0.5 mg of protein per ml) and the size of the crystals (24) indicate that each cell has to synthesize $10^6$ to $2 \times 10^6$ $\delta$-endotoxin molecules during the stationary phase to form a crystal} \cite[p. 1]{Agaisse1995}
+\end{citacao}
+
+Exemplo de nota de rodapé\footnote{Essa é uma nota de rodapé!}.

@@ -1,0 +1,43 @@
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+	
+	\begin{center}
+		
+		{\ABNTEXchapterfont\large\textsc{\imprimirautor}}
+		
+		\vspace*{\fill}\vspace*{\fill}
+		\begin{center}
+            \ABNTEXchapterfont\Large\textsc{\imprimirtitulo\ifdef{\osubtitulo}{:}{}}
+            
+            \ifdef{\osubtitulo}{\ABNTEXchapterfont\Large\imprimirsubtitulo}{}
+		\end{center}
+		\vspace*{\fill}
+		
+		\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\imprimirpreambulo
+		\end{minipage}%
+		\vspace*{\fill}
+	\end{center}
+	
+	Aprovado em DIA(número) de MÊS(por extenso) de ANO(Número).
+	
+	\assinatura{\textbf{\imprimirorientador} \\ Orientador \\ Titulação \\ Instituição} 
+	\assinatura{\textbf{Professor Convidado 1} \\ Titulação \\ Instituição}
+	\assinatura{\textbf{Professor Convidado 2} \\ Titulação \\ Instituição}
+	
+	\begin{center}
+		\vspace*{0.5cm}
+		{\large\imprimirlocal}
+		\par
+		{\large\imprimirano}
+		\vspace*{1cm}
+	\end{center}
+	
+\end{folhadeaprovacao}

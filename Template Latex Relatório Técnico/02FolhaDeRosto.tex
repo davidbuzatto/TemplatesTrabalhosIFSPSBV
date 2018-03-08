@@ -1,0 +1,48 @@
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\FloatBarrier
+\begin{table}[!htbp]
+	\centering
+	\renewcommand{\arraystretch}{1.5}% Spread rows out...
+	\begin{tabular}{| >{\centering}m{2in} | >{\centering}m{2in} | >{\centering\arraybackslash}m{2in} | }
+		\hline
+		\specialcell[t]{INSTITUTO FEDERAL DE\\EDUCAÇÃO, CIÊNCIA E\\TECNOLOGIA DE SÃO\\PAULO - CÂMPUS SÃO\\JOÃO DA BOA VISTA} & \imprimirmes & \imprimirano \\
+		\hline
+		\multicolumn{3}{|c|}{\specialcell{
+				
+				\\ \\
+				
+				\imprimircurso
+				
+				\\ \\ \\ \\ \\ \\
+				
+				\begin{minipage}[t]{0.9\columnwidth}%
+				    \centering
+				    \ABNTEXchapterfont\LARGE\imprimirtitulo\ifdef{\osubtitulo}{:}{}
+                    
+                    \ifdef{\osubtitulo}{\ABNTEXchapterfont\Large\imprimirsubtitulo}{}
+                    
+				\end{minipage}
+				
+				\\ \\ \\ \\
+				
+				}}\\
+		\multicolumn{3}{|r|}{\specialcell{
+				
+                \begin{minipage}[t]{0.9\columnwidth}%
+   				    \flushright
+    				\imprimirautor \ifdef{\ocoorientador}{,}{\ e}
+                    \\
+                    \imprimirorientador \ifdef{\ocoorientador}{ e\\\imprimircoorientador}{}
+                \end{minipage}
+				
+				\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+				
+			}}\\
+			\hline
+		\multicolumn{2}{|l|}{\specialcell{Palavras-chave:\\Palavra-chave 1. Palavra-chave 2. Palavra-chave n.}} & \pageref{LastPage} páginas\\
+		\hline
+	\end{tabular}
+\end{table}
+\FloatBarrier

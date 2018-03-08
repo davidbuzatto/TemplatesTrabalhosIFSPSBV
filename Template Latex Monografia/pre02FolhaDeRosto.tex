@@ -1,0 +1,35 @@
+\begin{center}
+   	
+   	\ABNTEXchapterfont\Large\textsc{\imprimirautor}
+   	\vspace{2.5cm}
+   	
+    \ABNTEXchapterfont\LARGE\imprimirtitulo\ifdef{\osubtitulo}{:}{}
+                           
+    \ifdef{\osubtitulo}{\ABNTEXchapterfont\Large\imprimirsubtitulo}{}
+   	\vspace{2.5cm}
+   	   	
+   	\hspace{.4\textwidth}
+   	\begin{minipage}{.5\textwidth}
+   		\SingleSpacing
+   		\large\imprimirpreambulo
+   		
+   		\vspace{\onelineskip}
+   		
+   		Orientador: \imprimirorientador
+   		
+        \ifdef{\ocoorientador}{
+     		\vspace{\onelineskip}
+   		
+    		Coorientador: \imprimircoorientador
+        }{}
+   		
+   	\end{minipage}%
+    \vfill
+   	
+   	\Large\textsc{\imprimirlocal}
+   	
+   	\Large\textsc{\imprimirano}
+   	
+   	\vspace*{2cm}
+   	
+\end{center}
