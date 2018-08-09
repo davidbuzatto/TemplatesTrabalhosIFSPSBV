@@ -13,6 +13,7 @@ del *.bbl
 del *.blg
 del *.lof
 del *.lot
+del *.loq
 del *.out
 del *.pdf
 del *.synctex

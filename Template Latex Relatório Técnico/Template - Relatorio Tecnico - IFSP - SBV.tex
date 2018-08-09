@@ -5,8 +5,8 @@
 % e pela bibliotecária M.Sc. Maria Carolina Gonçalves do campus
 % São João da Boa Vista do IFSP.
 %
-% Versão 1.2
-% Data: 06/03/2018
+% Versão 1.3
+% Data: 09/08/2018
 
 \documentclass[
 	% -- opções da classe memoir --
@@ -45,7 +45,7 @@
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
-\usepackage[final]{graphicx}	% Inclusão de gráficos
+\usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{hyperref}
 \usepackage{subfig}
@@ -76,13 +76,22 @@
 % Pacotes de citações
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[alf,abnt-emphasize=bf]{abntex2cite}  % Citações padrão ABNT
 
 
 % ---------------------------------------------------------------------------------
 %                          CONFIGURAÇÕES DOS PACOTES
 % ---------------------------------------------------------------------------------
 
+% ---
+% Configurações do pacote backref
+%
+% Para desativar, tire o comentário de \begin{comment} e \end{comment} 
+% das próximas linhas e comente a linha \usepackage[brazilian,hyperpageref]{backref}
+% acima.
+% ---
+
+%\begin{comment}
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -99,6 +108,8 @@
 	Citado #1 vezes nas páginas #2.%
 	\fi}%
 % ---
+%\end{comment}
+
 
 % listagens
 \definecolor{corComentario}{RGB}{150,150,150}
@@ -149,19 +160,27 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 
-\curso{Tecnologia em Sistemas para Internet}
-\grau{Tecnólogo em Sistemas para Internet}
+\curso{Nome do Curso}
+\grau{Definição do grau}
 
+%exemplos
+%\curso{Tecnologia em Sistemas para Internet}
+%\grau{Tecnólogo em Sistemas para Internet}
 %\curso{Especialização em Desenvolvimento de Aplicações para Dispositivos Móveis}
 %\grau{Especialista em Desenvolvimento de Aplicações para Dispositivos Móveis}
 
 \titulo{Título}
+
+% caso não haja subtítulo, comente a linha abaixo
 \subtitulo{subtítulo}
+
 \tipotrabalho{Relatório Técnico}
 \area{Área de Concentração do Trabalho}
 
 \autor{Nome Completo}
 \orientador{Prof./Profa. Me./Dr./Dra. Nome Completo}
+
+% caso não haja coorientador, comente a linha abaixo
 \coorientador{Prof./Profa. Me./Dr./Dra. Nome Completo}
 
 \local{São João da Boa Vista}
@@ -171,10 +190,10 @@
 \instituicao{%
 	Instituto Federal de Educação, Ciência e Tecnologia de São Paulo
 	\par
-	Campus São João da Boa Vista
+	Câmpus São João da Boa Vista
 }
 
-\preambulo{\imprimirtipotrabalho\ elaborado conforme a ABNT NBR 10719:10, apresentado ao Instituto Federal de São Paulo, como parte dos requisitos para a obtenção do grau de \imprimirgrau.
+\preambulo{\imprimirtipotrabalho\ elaborado conforme a ABNT NBR 10719:10, apresentado ao Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, como parte dos requisitos para a obtenção do grau de \imprimirgrau.
 \\
 \\
 Área de Concentração: \imprimirarea}
@@ -183,6 +202,7 @@
 
 % ---
 % Configurações de aparência do PDF final
+% ---
 
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
@@ -213,6 +233,27 @@
 
 % comando para inserir autor e ano
 \newcommand{\citeauthorandyear}[1]{\citeauthoronline{#1} (\citeyear{#1})}
+
+
+% ---
+% Novo list of (listings) para Quadros
+% ---
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de Quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{quadro}{hbtp}
 
 
 
