@@ -26,3 +26,4 @@ del *.idx
 del *.gz
 del *.gz(busy)
 del *.stf
+del *.xwm
