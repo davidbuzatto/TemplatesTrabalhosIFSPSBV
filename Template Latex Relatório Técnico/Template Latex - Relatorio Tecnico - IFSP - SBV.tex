@@ -1,18 +1,17 @@
-% Desenvolvido por Prof. Dr. David Buzatto
+% Desenvolvido por: Prof. Dr. David Buzatto
 %
 % Baseado na documentação do abntex2 e nos modelos em
 % Microsoft Word propostos pela Profa. Dra. Rosana F. L. Rodrigues
-% e pela bibliotecária M.Sc. Maria Carolina Gonçalves do campus
+% e pela bibliotecária M.Sc. Maria Carolina Gonçalves do câmpus
 % São João da Boa Vista do IFSP.
 %
-% Versão 1.4
-% Data: 27/08/2018
+% Versão 1.5
+% Data: 03/09/2018
 
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	oneside,			% impressão em um lado
 	a4paper,			% tamanho do papel. 
 	%normalfigtabnum,
 	%pnumromarab,
@@ -45,8 +44,8 @@
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
-\usepackage{graphicx}	% Inclusão de gráficos
+\usepackage{xcolor,colortbl}	% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{hyperref}
 \usepackage{subfig}
@@ -57,13 +56,19 @@
 \usepackage[figuresright]{rotating}
 \usepackage{chemfig}
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{lastpage}
 \usepackage{amssymb}
 \usepackage{enumitem}
 \usepackage{bigints}
 \usepackage{listings}
 \usepackage{etoolbox}
-\let\footruleskip\undefined
-\usepackage[printwatermark]{xwatermark}
+\usepackage[final]{pdfpages}
+\usepackage{bigstrut}
+
+
 % ---
 
 % ---
@@ -155,8 +160,6 @@
 \newcommand{\curso}[1]{\def \ocurso {#1}}
 \newcommand{\imprimircurso}{\ocurso}
 
-\newwatermark*[page=4,color=red!50,angle=60,scale=2,xpos=-20,ypos=20]{ALUNO:\\SUBSTITUIR PELA\\FICHA DA\\BIBLIOTECA}
-\newwatermark*[page=5,color=blue!50,angle=60,scale=2,xpos=0,ypos=0]{COORDENADOR:\\SUBSTITUIR PELA\\FOLHA DE\\APROVAÇÃO}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -174,9 +177,9 @@
 \titulo{Título}
 
 % caso não haja subtítulo, comente a linha abaixo
-\subtitulo{subtítulo}
+\subtitulo{subtítulo (se houver)}
 
-\tipotrabalho{Trabalho de Conclusão de Curso}
+\tipotrabalho{Relatório Técnico}
 \area{Área de Concentração do Trabalho}
 
 \autor{Nome Completo}
@@ -195,7 +198,7 @@
 	Câmpus São João da Boa Vista
 }
 
-\preambulo{\imprimirtipotrabalho\ apresentado ao Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, como parte dos requisitos para a obtenção do grau de \imprimirgrau.
+\preambulo{\imprimirtipotrabalho\ elaborado conforme a ABNT NBR 10719:10, apresentado ao Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, como parte dos requisitos para a obtenção do grau de \imprimirgrau.
 \\
 \\
 Área de Concentração: \imprimirarea}
@@ -285,7 +288,7 @@
 %                                   INÍCIO DO DOCUMENTO
 % ---------------------------------------------------------------------------------
 \begin{document}
-	
+
 % Seleciona o idioma do documento (conforme pacotes do babel)
 %\selectlanguage{english}
 \selectlanguage{brazil}
@@ -293,93 +296,10 @@
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
 
+\pretextual
+\input{01Capa}
+\input{02FolhaDeRosto}
 
-% ---------------------------------------------------------------------------------
-%                                   ELEMENTOS PRÉ-TEXTUAIS
-% ---------------------------------------------------------------------------------
-% \pretextual
-
-% ---
-% Capa
-% ---
-%\imprimircapa
-\input{pre01Capa}
-% ---
-
-% ---
-% Folha de rosto
-% (o * indica que haverá a ficha bibliográfica)
-% ---
-%\imprimirfolhaderosto*
-\input{pre02FolhaDeRosto}
-% ---
-
-% ---
-% Inserir a ficha catalográfica
-% ---
-\input{pre03FichaCatalografica}
-
-% ---
-% Inserir folha de aprovação
-% ---
-\input{pre04FolhaDeAprovacao}
-
-% ---
-% Dedicatória
-% ---
-\input{pre05Dedicatoria}
-
-% ---
-% Agradecimentos
-% ---
-\input{pre06Agradecimentos}
-
-% ---
-% Epígrafe
-% ---
-\input{pre07Epigrafe}
-
-% ---
-% Resumos
-% ---
-\input{pre08Resumo}
-\input{pre09Abstract}
-
-% ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de tabelas
-% ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de quadros
-% ---
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\input{pre10ListaSiglas}
-% ---
-
-% ---
-% inserir lista de símbolos
-% ---
-\input{pre11ListaSimbolos}
-% ---
 
 % ---
 % inserir o sumário
@@ -389,68 +309,29 @@
 \cleardoublepage
 % ---
 
+\input{03Resumo}
 
-
-
-
-
-% ---------------------------------------------------------------------------------
-%                                  ELEMENTOS TEXTUAIS
-% ---------------------------------------------------------------------------------
 \textual
-
 \input{capitulo01Introducao}
-\input{capitulo02RevisaoLiteratura}
+\input{capitulo02ConsideracoesGerais}
 \input{capitulo03Metodologia}
-\input{capitulo04ResultadosDiscussao}
-\input{capitulo05Conclusoes}
-\input{capitulo06Cronograma}
-
-
-
-
-
-
-% ---------------------------------------------------------------------------------
-%                                 ELEMENTOS PÓS-TEXTUAIS
-% ---------------------------------------------------------------------------------
-\postextual
+\input{capitulo04AnaliseDosResultados}
+\input{capitulo05ConclusoesRecomendacoes}
 
 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
+\postextual
 \bibliography{referencias}
 
-
-% ----------------------------------------------------------
-% Glossário
-% ----------------------------------------------------------
 %
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+% Este é um exemplo de folha de aprovação.
 %
-%\glossary
-
-
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
-\input{pos01Apendices}
-
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-\input{pos02Anexos}
-
-
-%---------------------------------------------------------------------
-% ÍNDICE REMISSIVO
-%---------------------------------------------------------------------
-
-%\phantompart
-
-%\printindex
-
+% A folha de aprovação final será inserida pelo Coordenador do Curso.
+%
+\begin{folhadeaprovacao}
+	\includepdf{folhaAprovacao/exemploFolhaAprovacao.pdf}
+\end{folhadeaprovacao}
 
 \end{document}
