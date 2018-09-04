@@ -41,7 +41,7 @@
 				
 			}}\\
 			\hline
-		\multicolumn{2}{|l|}{\specialcell{Palavras-chave:\\Palavra-chave 1. Palavra-chave 2. Palavra-chave n.}} & \pageref{LastPage} páginas\\
+		\multicolumn{2}{|l|}{\specialcell{Palavras-chave:\\Palavra-chave 1. Palavra-chave 2. Palavra-chave n.}} & \the\numexpr \getpagerefnumber{LastPage} - 1 \relax \  páginas \\
 		\hline
 	\end{tabular}
 \end{table}
