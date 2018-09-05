@@ -5,3 +5,5 @@ Neste repositório são encontrados os templates em LaTeX e MS Word dos trabalho
 Os nomes dos arquivos e diretórios não estão acentuados propositalmente.
 
 Este respositório é mantido pelo Prof. Dr. David Buzatto (davidbuzatto[at]ifsp.edu.br).
+
+Os estilos ABNT para o Microsoft Word são mantidos no repositório BibWord (https://github.com/codingo/BibWord).
