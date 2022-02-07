@@ -1,0 +1,171 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{estrutura}[2022/02/07 Modelo para Monografias, Artigos e Relatórios Técnicos]
+
+\RequirePackage{lmodern}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lastpage}
+\RequirePackage{indentfirst}
+\RequirePackage{xcolor,colortbl}
+\RequirePackage{graphicx}
+\RequirePackage{microtype}
+\RequirePackage{hyperref}
+\RequirePackage{subfig}
+\RequirePackage{epigraph}
+\RequirePackage{url}
+\RequirePackage{placeins}
+\RequirePackage{multirow}
+\RequirePackage[figuresright]{rotating}
+\RequirePackage{chemfig}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{lastpage}
+\RequirePackage{enumitem}
+\RequirePackage{bigints}
+\RequirePackage{listingsutf8}
+\RequirePackage{etoolbox}
+\RequirePackage[final]{pdfpages}
+\RequirePackage{bigstrut}
+
+\definecolor{corComentario}{RGB}{150,150,150}
+\definecolor{corString}{RGB}{206,123,0}
+\definecolor{corPalavraChave}{RGB}{0,0,230}
+
+\lstset{
+    inputencoding=utf8/latin1,
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberstyle=\footnotesize,
+	extendedchars=true,
+	breaklines=true,
+	lineskip=0pt,
+	frame=tb,
+	basicstyle=\ttfamily\footnotesize,
+	showstringspaces=false,
+	stringstyle=\color{corString},
+	commentstyle=\color{corComentario},
+	keywordstyle=\color{corPalavraChave}
+}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand{\ano}[1]{\def \oano {#1}}
+\newcommand{\imprimirano}{\oano}
+
+\newcommand{\mes}[1]{\def \omes {#1}}
+\newcommand{\imprimirmes}{\omes}
+
+\newcommand{\dia}[1]{\def \odia {#1}}
+\newcommand{\imprimirdia}{\odia}
+
+\newcommand{\area}[1]{\def \aarea {#1}}
+\newcommand{\imprimirarea}{\aarea}
+
+\newcommand{\aluno}[1]{\def \oaluno {#1}}
+\newcommand{\imprimiraluno}{\oaluno}
+
+\newcommand{\subtitulo}[1]{\def \osubtitulo {#1}}
+\newcommand{\imprimirsubtitulo}{\osubtitulo}
+
+\newcommand{\gradorientador}[1]{\def \agradorientador {#1}}
+\newcommand{\imprimirgradorientador}{\agradorientador}
+
+\newcommand{\instgradorientador}[1]{\def \ainstgradorientador {#1}}
+\newcommand{\imprimirinstgradorientador}{\ainstgradorientador}
+
+\newcommand{\posorientador}[1]{\def \aposorientador {#1}}
+\newcommand{\imprimirposorientador}{\aposorientador}
+
+\newcommand{\instposorientador}[1]{\def \ainstposorientador {#1}}
+\newcommand{\imprimirinstposorientador}{\ainstposorientador}
+
+\newcommand{\docorientador}[1]{\def \odocorientador {#1}}
+\newcommand{\imprimirdocorientador}{\odocorientador}
+
+\renewcommand{\coorientador}[1]{\def \ocoorientador {#1}}
+\renewcommand{\imprimircoorientador}{\ocoorientador}
+
+\newcommand{\gradcoorientador}[1]{\def \agradcoorientador {#1}}
+\newcommand{\imprimirgradcoorientador}{\agradcoorientador}
+
+\newcommand{\instgradcoorientador}[1]{\def \ainstgradcoorientador {#1}}
+\newcommand{\imprimirinstgradcoorientador}{\ainstgradcoorientador}
+
+\newcommand{\poscoorientador}[1]{\def \aposcoorientador {#1}}
+\newcommand{\imprimirposcoorientador}{\aposcoorientador}
+
+\newcommand{\instposcoorientador}[1]{\def \ainstposcoorientador {#1}}
+\newcommand{\imprimirinstposcoorientador}{\ainstposcoorientador}
+
+\newcommand{\doccoorientador}[1]{\def \odoccoorientador {#1}}
+\newcommand{\imprimirdoccoorientador}{\odoccoorientador}
+
+\newcommand{\campus}[1]{\def \ocampus {#1}}
+\newcommand{\imprimircampus}{\ocampus}
+
+\newcommand{\grau}[1]{\def \ograu {#1}}
+\newcommand{\imprimirgrau}{\ograu}
+
+\newcommand{\curso}[1]{\def \ocurso {#1}}
+\newcommand{\imprimircurso}{\ocurso}
+
+
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+\hypersetup{
+	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={Nome Completo},
+	pdfkeywords={Palavra chave 1}{Palavra chave 2}{Palavra chave 3}{Palavra chave n}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=black,          	% color of internal links
+	citecolor=black,       		% color of links to bibliography
+	filecolor=black,      		% color of file links
+	urlcolor=black,
+	bookmarksdepth=4
+}
+\makeatother
+
+\newcommand{\citeauthorandyear}[1]{\citeauthoronline{#1} (\citeyear{#1})}
+
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de Quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{quadro}{hbtp}
+
+% em versões mais novas do abntex2 o preenchimento da macro
+% \tituloestrangeiro tornou-se obrigatório.
+% abaixo redefine-se a macro \maketitlehookb que usa o 
+% título estrangeiro para inserção no cabeçalho e que gera
+% erros caso não tenha se definido tal título
+\renewcommand{\maketitlehookb}{}
+
+\newcommand{\definirdata}{\data{\imprimirdia\ de \imprimirmes\ de \imprimirano}}
+
+\newcommand{\definirautores}{%
+\ifdef{\ocoorientador}{
+	\autor{\imprimiraluno\thanks{Graduando do Curso Superior em \imprimircurso.} \and \imprimircoorientador\thanks{\imprimircoorientador. Graduado em \imprimirgradcoorientador, pela \imprimirinstgradcoorientador, \imprimirposcoorientador, pela \imprimirinstposcoorientador. Docente do Curso Superior em \imprimirdoccoorientador.} \and \imprimirorientador\thanks{\imprimirorientador. Graduado em \imprimirgradorientador, pela \imprimirinstgradorientador, \imprimirposorientador, pela \imprimirinstposorientador. Docente do Curso Superior em \imprimirdocorientador.}}}%
+{
+	\autor{\imprimiraluno \thanks{Graduando do Curso Superior em \imprimircurso.} \and \imprimirorientador\thanks{\imprimirorientador. Graduado em \imprimirgradorientador, pela \imprimirinstgradorientador, \imprimirposorientador, pela \imprimirposorientador. Docente do Curso Superior em \imprimirdocorientador.}}
+}
+}%
+
+\endinput

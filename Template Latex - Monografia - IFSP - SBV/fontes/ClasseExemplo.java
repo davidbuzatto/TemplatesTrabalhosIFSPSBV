@@ -3,13 +3,10 @@
  * 
  * @author David Buzatto
  */
-public class Grafo {
+public class ClasseExemplo {
     
     public static void main( String[] args ) {
-        
-        System.out.println( "Exemplo de codigo fonte!" );
-        System.out.println( "Nao use acentos!" );
-        
+        System.out.println( "Exemplo de código fonte!" );
     }
     
 }
