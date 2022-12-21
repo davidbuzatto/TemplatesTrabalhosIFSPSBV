@@ -1,0 +1,6 @@
+# essa linha é um comentário e não será processada em loadMap()
+
+
+F  EBF
+D  CAD
+HBBGAHBB
