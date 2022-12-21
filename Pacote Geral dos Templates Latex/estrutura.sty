@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{estrutura}[2022/02/07 Modelo para Monografias, Artigos e Relatórios Técnicos]
+\ProvidesPackage{estrutura}[2022/12/21 Modelo para Monografias, Artigos e Relatórios Técnicos]
 
 \RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
@@ -48,6 +48,19 @@
 	stringstyle=\color{corString},
 	commentstyle=\color{corComentario},
 	keywordstyle=\color{corPalavraChave}
+}
+
+% ajuste para remoção de warning para apêndices e anexos
+\renewcommand{\PRIVATEapendiceconfig}[2]{%
+   \setboolean{abntex@apendiceousecao}{true}%
+   \renewcommand{\appendixname}{#1}
+   \ifthenelse{\boolean{ABNTEXsumario-abnt-6027-2012}}{
+       \renewcommand{\appendixtocname}{\texorpdfstring{\MakeTextUppercase{#2}}{#2}}
+   }{%
+   \renewcommand{\appendixtocname}{#2}} 
+   \renewcommand{\appendixpagename}{#2}
+   \switchchapname{#1}% Corrected from \switchapname -> \switchchapname
+   \renewcommand*{\cftappendixname}{#1 \space}
 }
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
