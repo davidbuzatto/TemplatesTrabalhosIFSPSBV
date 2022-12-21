@@ -80,6 +80,15 @@
 \input{01Capa}
 \input{02FolhaDeRosto}
 
+% ---
+% Inserir a ficha catalográfica
+% ---
+\input{03FichaCatalografica}
+
+% ---
+% Inserir ata de defesa
+% ---
+\input{04AtaDefesa}
 
 % ---
 % inserir o sumário
@@ -89,7 +98,7 @@
 \cleardoublepage
 % ---
 
-\input{03Resumo}
+\input{05Resumo}
 
 \textual
 \input{capitulo01Introducao}
@@ -104,14 +113,5 @@
 % ----------------------------------------------------------
 \postextual
 \bibliography{referencias}
-
-%
-% Este é um exemplo de folha de aprovação.
-%
-% A folha de aprovação final será inserida pelo Coordenador do Curso.
-%
-\begin{folhadeaprovacao}
-	\includepdf{folhaAprovacao/exemploFolhaAprovacao.pdf}
-\end{folhadeaprovacao}
 
 \end{document}
