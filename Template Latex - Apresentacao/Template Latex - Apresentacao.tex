@@ -1,135 +1,45 @@
+% Desenvolvido por: Prof. Dr. David Buzatto
+%
+% Versão 1.0.0
+% Data: 22/12/2022
 \documentclass[aspectratio=169]{beamer}
 
-\usepackage{estrutura}
-
-
-
-
-\logo{%
-\begin{tikzpicture}[overlay,remember picture]
-\node[left=0cm] at (current page.-27){
-    \includegraphics[scale=0.2]{imagens/logo}
-};
-\end{tikzpicture}
-}
-
-\beamertemplatenavigationsymbolsempty
-\setbeamerfont{page number in head/foot}{size=\normalsize}
-\setbeamertemplate{footline}[frame number]
-
-\definecolor{IFSPEscuro}{RGB}{18, 47, 17}
-\definecolor{IFSPPrimario}{RGB}{36, 93, 33}
-\definecolor{IFSPSecundario}{RGB}{63, 112, 60}
-\definecolor{IFSPTerciario}{RGB}{90, 140, 87}
-\definecolor{IFSPQuaternario}{RGB}{125, 169, 123}
-
-\setbeamercolor*{palette primary}{bg=IFSPPrimario,fg=white}
-\setbeamercolor*{palette secondary}{bg=IFSPSecundario,fg=white}
-\setbeamercolor*{palette tertiary}{bg=IFSPTerciario,fg=white}
-\setbeamercolor*{palette quaternary}{bg=IFSPQuaternario,fg=IFSPPrimario}
-\setbeamercolor{palette sidebar primary}{bg=IFSPPrimario,fg=white}
-\setbeamercolor{palette sidebar secondary}{bg=IFSPSecundario,fg=white}
-\setbeamercolor{palette sidebar tertiary}{bg=IFSPTerciario,fg=white}
-\setbeamercolor{palette sidebar quaternary}{bg=IFSPQuaternario,fg=white}
-\setbeamercolor{structure}{fg=IFSPPrimario}
-\setbeamercolor{section in toc}{fg=black}
-\setbeamercolor{subsection in toc}{fg=IFSPPrimario}
-\setbeamercolor{section in head/foot}{bg=IFSPEscuro,fg=white}
-\setbeamercolor{subsection in head/foot}{bg=IFSPSecundario,fg=white}
-
-\newcommand{\footlinepayoff}[1]{\renewcommand{\@footlinepayoff}{#1}}
-% Define footline content
-\setbeamertemplate{footline}{%
-  \begin{beamercolorbox}[wd=\textwidth,ht=5mm,dp=3mm,rightskip=1cm,leftskip=1cm]{footline}
-  \insertframenumber/\inserttotalframenumber
-  \ifstrempty{\@footlinepayoff}{}{%
-    \usebeamerfont{footline}\hfill
-  }
-  \end{beamercolorbox}
-}
-
-\setbeamercolor{title}{fg=IFSPPrimario,bg=white}
-\setbeamercolor{alerted text}{fg=red}
-\setbeamercolor{author}{fg=black}
-\setbeamercolor{date}{fg=black}
-
-\setbeamerfont{author}{size=\scriptsize}
-\setbeamerfont{date}{size=\tiny}
-\setbeamerfont{title}{series=\bfseries}
-\setbeamerfont{subtitle}{series=\mdseries,size=\footnotesize}
-\setbeamerfont{frametitle}{series=\bfseries}
-\setbeamerfont{framesubtitle}{series=\mdseries}
-\setbeamerfont{footline}{size=\scriptsize}
-\setbeamerfont{block title}{series=\centering\bfseries}
-
-% Code to get prettier boxes
-\setbeamertemplate{blocks}[rounded]
-
-% Bullets in several levels
-\setbeamertemplate{itemize item}{\textbullet}
-\setbeamertemplate{itemize subitem}{\textemdash}
-\setbeamertemplate{itemize subsubitem}{\ensuremath{\circ}}
-
-\def\@courseLabel{}
-
-\newcommand{\course}[1]{\def\@courseLabel{#1}}
-
-% Define the title page
-\setbeamertemplate{title page}{%
-  \vskip0pt plus 1filll%
-  % Reposition the box in an inelegant way - but it works!
-  \hspace{-12mm}
-  \vspace{20mm}
-  \begin{beamercolorbox}[wd=0.68\textwidth,sep=10pt,leftskip=8mm]{title}%
-    {\usebeamerfont{title}\inserttitle}
-  
-    {\usebeamerfont{subtitle}\insertsubtitle}
-
-    {\usebeamerfont{subtitle}\@courseLabel}
-    
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{\insertauthor}}
-  
-    {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate}
-  \end{beamercolorbox}
-}
+\usepackage{estruturaApresentacao}
 
 \begin{document}
 
+\titulo{Título}
+% caso não haja, comente a linha abaixo
+\subtitulo{subtítulo (se houver)}
+
+\autor{Nome Completo}
+\orientador{Prof./Profa. Me./Dr./Dra. Nome Completo}
+% caso não haja, comente a linha abaixo
+\coorientador{Prof./Profa. Me./Dr./Dra. Nome Completo}
+
+\curso{Nome do Curso}
+
+%exemplos
+%\curso{Bacharelado em Ciência da Computação}
+%\curso{Tecnologia em Sistemas para Internet}
+%\curso{Especialização em Desenvolvimento de Aplicações para Dispositivos Móveis}
+
+\local{São João da Boa Vista}
+\dia{DIA}
+\mes{MÊS}
+\ano{ANO}
 
 
-
-\title{Título do Trabalho}
-\subtitle{Subtítulo}
-\course{Curso}
-%\course{Bacharelado em Ciência da Computação}
-%\course{Tecnologia em Sistemas para Internet}
-\author{Nome Completo (BVXXXXX-X)}
-\date{DIA de MÊS de ANO}
-
-
-%\maketitle
-\begin{frame}[plain]
-    
-    \begin{tikzpicture}[overlay,remember picture]
-        \node[left=-0.15cm] at (current page.0){
-            \includegraphics[scale=0.142]{imagens/capa}
-        };
-      \end{tikzpicture}
-      
-    \titlepage
-\end{frame}
-
-\section[Agenda]{}
-
-\begin{frame}
-    \frametitle{Agenda}
-    \tableofcontents
-\end{frame}
-
+\input{00Capa}
 \input{01Introducao}
 \input{02RevisaoLiteraturaConsideracoesGerais}
 \input{03Metodologia}
 \input{04Resultados}
 \input{05Conclusao}
+
+
+% exemplos de construções em LaTeX
+% comente a linha abaixo para gerar a versão final
+\input{06Exemplos}
 
 \end{document} 
