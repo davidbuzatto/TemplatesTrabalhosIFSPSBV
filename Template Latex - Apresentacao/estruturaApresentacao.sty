@@ -60,8 +60,10 @@
 }
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 \newcommand{\titulo}[1]{\def\@tituloLabel{#1}}
 \newcommand{\subtitulo}[1]{\def\@subtituloLabel{#1}}
+\newcommand{\nome}[1]{\def\@nomeLabel{#1}}
 \newcommand{\autor}[1]{\def\@autorLabel{#1}}
 \newcommand{\orientador}[1]{\def\@orientadorLabel{#1}}
 \newcommand{\coorientador}[1]{\def\@coorientadorLabel{#1}}
@@ -142,19 +144,21 @@
   \hspace{-12mm}
   \vspace{20mm}
   \begin{beamercolorbox}[wd=0.6\textwidth,sep=10pt,leftskip=8mm]{title}%
-    {\usebeamerfont{title}\@tituloLabel}{\ifdef{\@subtituloLabel}{{\usebeamerfont{title}:}}{}}
+    {\ifdef{\@tituloLabel}{{\usebeamerfont{title}\@tituloLabel}{\ifdef{\@subtituloLabel}{{\usebeamerfont{title}:}}{}}}{}}
   
     {\ifdef{\@subtituloLabel}{{\usebeamerfont{subtitle}\@subtituloLabel}}{}}
     
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Curso: }\@cursoLabel}
+    {\ifdef{\@cursoLabel}{{\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Curso: }\@cursoLabel}}{}}
     
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Aluno(a): }\@autorLabel}
+    {\ifdef{\@nomeLabel}{{\usebeamerfont{author}\usebeamercolor[fg]{author}\@nomeLabel}}{}}
     
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Orientador(a): }\@orientadorLabel}
+    {\ifdef{\@autorLabel}{{\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Aluno(a): }\@autorLabel}}{}}
+    
+    {\ifdef{\@orientadorLabel}{{\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Orientador(a): }\@orientadorLabel}}{}}
     
     {\ifdef{\@coorientadorLabel}{\usebeamerfont{author}\usebeamercolor[fg]{author}\textbf{Coorientador(a): }\@coorientadorLabel}{}}
   
-    {\usebeamerfont{date}\usebeamercolor[fg]{date}\@localLabel,{ }\@diaLabel{ }de \@mesLabel{ }de \@anoLabel}
+    {\ifdef{\@localLabel}{{\usebeamerfont{date}\usebeamercolor[fg]{date}\@localLabel,{ }\@diaLabel{ }de \@mesLabel{ }de \@anoLabel}}{}}
   \end{beamercolorbox}
 }
 
