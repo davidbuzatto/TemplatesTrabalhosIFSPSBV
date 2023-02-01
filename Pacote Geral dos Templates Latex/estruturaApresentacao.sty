@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{estruturaApresentacao}[2022/12/22 Modelo para Apresentações]
+\ProvidesPackage{estruturaApresentacao}[2023/01/31 Modelo para Apresentações]
 
 \RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
@@ -35,8 +35,23 @@
 
 \usetikzlibrary{automata, arrows.meta, positioning, shapes}
 
-\usetheme{Darmstadt}
+\DeclareOption{hideSubsectionTitle}{
+    \ifdefined\esconder
+    \else
+        \newcommand{\esconder}{}
+    \fi
+}
+
+\ProcessOptions\relax
+
+\ifdefined\esconder
+    \usetheme{Frankfurt}
+\else
+    \usetheme{Darmstadt}
+\fi
+
 \renewcommand{\familydefault}{\sfdefault}
+
 
 \definecolor{corComentario}{RGB}{150,150,150}
 \definecolor{corString}{RGB}{206,123,0}
