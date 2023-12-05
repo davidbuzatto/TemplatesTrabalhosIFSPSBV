@@ -24,6 +24,7 @@ del *.lot
 del *.nav
 del *.out
 del *.pdf
+del *.pyg
 del *.sav
 del *.sigla
 del *.siglax
