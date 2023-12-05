@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{estrutura}[2022/12/21 Modelo para Monografias, Artigos e Relatórios Técnicos]
+\ProvidesPackage{estrutura}[2023/12/04 Modelo para Monografias, Artigos e Relatórios Técnicos]
 
 \RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
@@ -28,6 +28,10 @@
 \RequirePackage{etoolbox}
 \RequirePackage[final]{pdfpages}
 \RequirePackage{bigstrut}
+\RequirePackage[brazilian,hyperpageref]{backref}
+\RequirePackage[alf,abnt-emphasize=bf]{abntex2cite}
+
+\bibliographystyle{abntex2-custom/abntex2-alf.bst}
 
 \definecolor{corComentario}{RGB}{150,150,150}
 \definecolor{corString}{RGB}{206,123,0}
