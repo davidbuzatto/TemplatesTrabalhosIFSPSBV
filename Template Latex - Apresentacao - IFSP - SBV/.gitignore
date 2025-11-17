@@ -5,6 +5,7 @@
 /*.blg
 /*.brf
 /*.def
+/*.dvi
 /*.equ
 /*.exp
 /*.gz
@@ -20,6 +21,7 @@
 /*.nav
 /*.out
 /*.pdf
+/*.ps
 /*.pyg
 /*.sav
 /*.sigla

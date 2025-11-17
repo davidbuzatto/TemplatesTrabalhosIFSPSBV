@@ -10,6 +10,7 @@ del *.bcf
 del *.blg
 del *.brf
 del *.def
+del *.dvi
 del *.equ
 del *.exp
 del *.gz
@@ -26,6 +27,7 @@ del *.minted
 del *.nav
 del *.out
 del *.pdf
+del *.ps
 del *.pyg
 del *.sav
 del *.sigla

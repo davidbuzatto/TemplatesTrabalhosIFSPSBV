@@ -1,9 +1,11 @@
 /Template Latex - Apresentacao - IFSP - SBV/*.aux
 /Template Latex - Apresentacao - IFSP - SBV/*.bak
 /Template Latex - Apresentacao - IFSP - SBV/*.bbl
+/Template Latex - Apresentacao - IFSP - SBV/*.bcf
 /Template Latex - Apresentacao - IFSP - SBV/*.blg
 /Template Latex - Apresentacao - IFSP - SBV/*.brf
 /Template Latex - Apresentacao - IFSP - SBV/*.def
+/Template Latex - Apresentacao - IFSP - SBV/*.dvi
 /Template Latex - Apresentacao - IFSP - SBV/*.equ
 /Template Latex - Apresentacao - IFSP - SBV/*.exp
 /Template Latex - Apresentacao - IFSP - SBV/*.gz
@@ -19,6 +21,7 @@
 /Template Latex - Apresentacao - IFSP - SBV/*.nav
 /Template Latex - Apresentacao - IFSP - SBV/*.out
 /Template Latex - Apresentacao - IFSP - SBV/*.pdf
+/Template Latex - Apresentacao - IFSP - SBV/*.ps
 /Template Latex - Apresentacao - IFSP - SBV/*.pyg
 /Template Latex - Apresentacao - IFSP - SBV/*.sav
 /Template Latex - Apresentacao - IFSP - SBV/*.sigla
@@ -31,13 +34,17 @@
 /Template Latex - Apresentacao - IFSP - SBV/*.synctex(busy)
 /Template Latex - Apresentacao - IFSP - SBV/*.toc
 /Template Latex - Apresentacao - IFSP - SBV/*.xwm
+/Template Latex - Apresentacao - IFSP - SBV/*.xml
+/Template Latex - Apresentacao - IFSP - SBV/*-blx.bib
 
 /Template Latex - Artigo - IFSP - SBV/*.aux
 /Template Latex - Artigo - IFSP - SBV/*.bak
 /Template Latex - Artigo - IFSP - SBV/*.bbl
+/Template Latex - Artigo - IFSP - SBV/*.bcf
 /Template Latex - Artigo - IFSP - SBV/*.blg
 /Template Latex - Artigo - IFSP - SBV/*.brf
 /Template Latex - Artigo - IFSP - SBV/*.def
+/Template Latex - Artigo - IFSP - SBV/*.dvi
 /Template Latex - Artigo - IFSP - SBV/*.equ
 /Template Latex - Artigo - IFSP - SBV/*.exp
 /Template Latex - Artigo - IFSP - SBV/*.gz
@@ -53,6 +60,7 @@
 /Template Latex - Artigo - IFSP - SBV/*.nav
 /Template Latex - Artigo - IFSP - SBV/*.out
 /Template Latex - Artigo - IFSP - SBV/*.pdf
+/Template Latex - Artigo - IFSP - SBV/*.ps
 /Template Latex - Artigo - IFSP - SBV/*.pyg
 /Template Latex - Artigo - IFSP - SBV/*.sav
 /Template Latex - Artigo - IFSP - SBV/*.sigla
@@ -64,14 +72,18 @@
 /Template Latex - Artigo - IFSP - SBV/*.synctex
 /Template Latex - Artigo - IFSP - SBV/*.synctex(busy)
 /Template Latex - Artigo - IFSP - SBV/*.toc
+/Template Latex - Artigo - IFSP - SBV/*.xml
 /Template Latex - Artigo - IFSP - SBV/*.xwm
+/Template Latex - Artigo - IFSP - SBV/*-blx.bib
 
 /Template Latex - Monografia - IFSP - SBV/*.aux
 /Template Latex - Monografia - IFSP - SBV/*.bak
 /Template Latex - Monografia - IFSP - SBV/*.bbl
+/Template Latex - Monografia - IFSP - SBV/*.bcf
 /Template Latex - Monografia - IFSP - SBV/*.blg
 /Template Latex - Monografia - IFSP - SBV/*.brf
 /Template Latex - Monografia - IFSP - SBV/*.def
+/Template Latex - Monografia - IFSP - SBV/*.dvi
 /Template Latex - Monografia - IFSP - SBV/*.equ
 /Template Latex - Monografia - IFSP - SBV/*.exp
 /Template Latex - Monografia - IFSP - SBV/*.gz
@@ -87,6 +99,7 @@
 /Template Latex - Monografia - IFSP - SBV/*.nav
 /Template Latex - Monografia - IFSP - SBV/*.out
 /Template Latex - Monografia - IFSP - SBV/*.pdf
+/Template Latex - Monografia - IFSP - SBV/*.ps
 /Template Latex - Monografia - IFSP - SBV/*.pyg
 /Template Latex - Monografia - IFSP - SBV/*.sav
 /Template Latex - Monografia - IFSP - SBV/*.sigla
@@ -98,14 +111,18 @@
 /Template Latex - Monografia - IFSP - SBV/*.synctex
 /Template Latex - Monografia - IFSP - SBV/*.synctex(busy)
 /Template Latex - Monografia - IFSP - SBV/*.toc
+/Template Latex - Monografia - IFSP - SBV/*.xml
 /Template Latex - Monografia - IFSP - SBV/*.xwm
+/Template Latex - Monografia - IFSP - SBV/*-blx.bib
 
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.aux
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.bak
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.bbl
+/Template Latex - Relatorio Tecnico - IFSP - SBV/*.bcf
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.blg
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.brf
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.def
+/Template Latex - Relatorio Tecnico - IFSP - SBV/*.dvi
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.equ
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.exp
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.gz
@@ -121,6 +138,7 @@
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.nav
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.out
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.pdf
+/Template Latex - Relatorio Tecnico - IFSP - SBV/*.ps
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.pyg
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.sav
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.sigla
@@ -132,4 +150,6 @@
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.synctex
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.synctex(busy)
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.toc
+/Template Latex - Relatorio Tecnico - IFSP - SBV/*.xml
 /Template Latex - Relatorio Tecnico - IFSP - SBV/*.xwm
+/Template Latex - Relatorio Tecnico - IFSP - SBV/*-blx.bib
