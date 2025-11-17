@@ -6,6 +6,7 @@ rem Desenvolvido por David Buzatto
 del *.aux
 del *.bak
 del *.bbl
+del *.bcf
 del *.blg
 del *.brf
 del *.def
@@ -21,6 +22,7 @@ del *.lof
 del *.log
 del *.loq
 del *.lot
+del *.minted
 del *.nav
 del *.out
 del *.pdf
@@ -35,4 +37,6 @@ del *.symbolsx
 del *.synctex
 del *.synctex(busy)
 del *.toc
+del *.xml
 del *.xwm
+del *-blx.bib

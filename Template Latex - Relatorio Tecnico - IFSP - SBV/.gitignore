@@ -1,6 +1,7 @@
 /*.aux
 /*.bak
 /*.bbl
+/*.bcf
 /*.blg
 /*.brf
 /*.def
@@ -30,4 +31,6 @@
 /*.synctex
 /*.synctex(busy)
 /*.toc
+/*.xml
 /*.xwm
+/*-blx.bib
